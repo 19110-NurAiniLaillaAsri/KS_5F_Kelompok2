@@ -54,8 +54,6 @@
                             <div class="card-body"><i class="fas fa-chart-bar me-2"></i>Pemasaran</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <h5>Read Data</h5><!-- jumlah di table identitas motor -->
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
@@ -64,8 +62,6 @@
                             <div class="card-body"><i class="far fa-address-card me-2"></i></i>Staff</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <h5>Read Data</h5><!-- jumlah staff -->
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
@@ -74,8 +70,6 @@
                             <div class="card-body"><i class="fas fa-users me-2"></i></i>Custommer</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <h5>Read Data</h5><!-- jumlah hak akses = custommer -->
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
@@ -100,7 +94,43 @@
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
                                     <td>61</td>
-                                    <td><button type="button" class="btn btn-primary" style="width: 100px";> Detail </button><br></td>
+                                    <td>
+                                        <!-- <button type="button" class="btn btn-primary" style="width: 100px";> Detail </button><br> -->
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editid_masuk" style="width: 100px";><i class="far fa-edit"></i> Detail </button>
+                                    </td>
+                                    <form action="" method="POST">
+                                                <div class="modal fade" id="editid_masuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Data Kendaraaan</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <!-- data foto kendaraan -->
+                                                                <img src="https://media.istockphoto.com/vectors/funny-bear-on-motorcycle-vector-id1288989678?b=1&k=20&m=1288989678&s=170667a&w=0&h=qCkXjmdJ0125vDAfoIYMcyrAFnRMJPhvSiEDj8liZZ4=" class="rounded" alt="...">
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <input class="form-control" type="text" name="nama_pemilik" value="nama_pemilik" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="plat_no" value="plat_no" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="merk" value="merk" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="type" value="type" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="warna" value="warna" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="tahun_pembuatan" value="tahun_pembuatan" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="masa_berlaku_stnk" value="masa_berlaku_stnk" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="pajak" value="pajak" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="harga" value="harga" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="odometer" value="odometer" aria-label="readonly input example" readonly><br>
+                                                                <input class="form-control" type="text" name="status" value="status" aria-label="readonly input example" readonly><br>
+                                                                <input type="hidden" name="id_motor" value="id_motor">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </form>
                                 </tr>
                                 </tbody>
                             </table>
