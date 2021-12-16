@@ -38,9 +38,9 @@
                     <h3 class="fs-4 warna-1 text-center mb-4">Input Identitas Motor</h3>
                     <form method="POST" class="warna-1 mx-auto px-5" style="width: 700px;">
                         <div class="row pb-3">
-                            <div class="col-4"><label>No Registrasi</label></div>
+                            <div class="col-4"><label>Id Motor</label></div>
                             <div class="col">
-                                <input type="text" class="form-control" name="no_registrasi">
+                                <input type="text" class="form-control" name="id_motor">
                             </div>
                         </div>
                         <div class="row pb-3">
@@ -50,25 +50,7 @@
                             </div>
                         </div>
                         <div class="row pb-3">
-                            <div class="col-4"><label>Alamat</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="alamat">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>No Rangka</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="no_rangka">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>No Mesin</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="no_mesin">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>Plat No</label></div>
+                            <div class="col-4"><label>Plat Nomor</label></div>
                             <div class="col">
                                 <input type="text" class="form-control form-box" name="plat_no">
                             </div>
@@ -106,30 +88,6 @@
                             </div>
                         </div>
                         <div class="row pb-3">
-                            <div class="col-4"><label>Model</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="model">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>Tahun Pembuatan</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="tahun_pembuatan">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>Isi Silinder</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="isi_silinder">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>Bahan Bakar</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="bahan_bakar">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
                             <div class="col-4"><label>Warna TNKB</label></div>
                             <div class="col">
                                 <select name="warna_tnkb" class="form-select">
@@ -141,27 +99,45 @@
                             </div>
                         </div>
                         <div class="row pb-3">
-                            <div class="col-4"><label>Tahun Registrasi</label></div>
+                            <div class="col-4"><label>Tahun Pembuatan</label></div>
                             <div class="col">
-                                <input type="text" class="form-control form-box" name="tahun_registrasi">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>No BPKB</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="no_bpkb">
-                            </div>
-                        </div>
-                        <div class="row pb-3">
-                            <div class="col-4"><label>Kode Lokasi</label></div>
-                            <div class="col">
-                                <input type="text" class="form-control form-box" name="kode_lokasi">
+                                <input type="text" class="form-control form-box" name="tahun_pembuatan">
                             </div>
                         </div>
                         <div class="row pb-3">
                             <div class="col-4"><label>Masa Berlaku STNK</label></div>
                             <div class="col">
                                 <input type="date" class="form-control form-box" name="masa_berlaku_stnk" value="<?php echo date('Y-m-d'); ?>" />
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-4"><label>Pajak</label></div>
+                            <div class="col">
+                                <input type="text" class="form-control form-box" name="pajak">
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-4"><label>Harga</label></div>
+                            <div class="col">
+                                <input type="text" class="form-control form-box" name="harga">
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-4"><label>Odometer</label></div>
+                            <div class="col">
+                                <input type="text" class="form-control form-box" name="odometer">
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-4"><label>Gambar</label></div>
+                            <div class="col">
+                                <input type="text" class="form-control form-box" name="gambar">
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-4"><label>Status</label></div>
+                            <div class="col">
+                                <input type="text" class="form-control form-box" name="status">
                             </div>
                         </div>
                         <div class="row text-center">
@@ -177,9 +153,10 @@
                         <table class="table table-bordered border-primary align-middle text-center  mx-auto" style="min-width: 800px;">
                             <thead class="table-dark border-light">
                                 <tr>
-                                    <th style="width: 20%;">ID User</th>
-                                    <th style="width: 30%;">Nama</th>
-                                    <th style="width: 20%;">Hak Akses</th>
+                                    <th style="width: 20%;">Merk</th>
+                                    <th style="width: 30%;">Plat Nomor</th>
+                                    <th style="width: 20%;">Type</th>
+                                    <th style="width: 20%;">Warna</th>
                                     <th style="width: 10%;">Aksi</th>
                                 </tr>
                             </thead>
@@ -189,10 +166,11 @@
                                                 <td>'.$row['id_user'].'</td>
                                                 <td>'.$row['nama'].'</td>
                                                 <td>'.$row['hak_akses'].'</td>
+                                                <td>warna</td>
                                                 <td>
-                                                    <button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit user ?')">
+                                                    <button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit Data Motor?')">
                                                     <i class="far fa-edit"></i></button>
-                                                    <button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus user ?')">
+                                                    <button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus Data Motor?')">
                                                     <i class="far fa-trash-alt"></i></button>
                                                 </td>
                                             </tr>
