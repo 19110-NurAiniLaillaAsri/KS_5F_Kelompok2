@@ -99,9 +99,9 @@
                                                 <td>'.$row['nama'].'</td>
                                                 <td>'.$row['hak_akses'].'</td>
                                                 <td>
-                                                    '?><button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit user ?')">
+                                                    '?><button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit User?')">
                                                     <i class="far fa-edit"></i></button><?php echo'
-                                                    '?><button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus user ?')">
+                                                    '?><button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus User?')">
                                                     <i class="far fa-trash-alt"></i></button><?php echo'
                                                 </td>
                                             </tr>
