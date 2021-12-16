@@ -2,6 +2,10 @@
     require '../koneksi.php';
     require 'function/session.php';
     require 'function/kelola_User.php';
+    $getID = $_GET['getID'];
+    $sqlUser = "SELECT * FROM user WHERE id_user='$getID'";
+    $query = mysqli_query($koneksi, $sqlUser);
+    $row = mysqli_fetch_array($query);
 ?>
 <html>
 <head>
@@ -17,12 +21,13 @@
                 <i class="me-2"></i>Penjualan<br>Motor Bekas
             </div>
             <div class="list-group list-group-flush my-3">
-                <a href="index.php" class="list-group-item list-group-item-action bg-transparent fw-bold warna-1"><i class="fas fa-home me-2"></i>Home</a>
-                <a href="M_identitasMotor.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-database me-2"></i>Identitas Motor</a>
-                <a href="M_kelolaUser.php" class="list-group-item list-group-item-action bg-transparent active-bar fw-bold"><i class="fas fa-users me-2"></i>Kelola User</a>
-                <a href="M_transaksi.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-tags me-2"></i>Transaksi</a>
+                <a href="index.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold">Home</a>
+                <a href="M_identitasMotor.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold">Identitas Motor</a>
+                <a href="M_kelolaUser.php" class="list-group-item list-group-item-action bg-transparent fw-bold active-bar">Membuat User</a>
+                <a href="M_transaksi.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold">Transaksi</a>
+                <a href="setting.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold">Pengaturan Akun</a>
                 <a href="../logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
-                onclick="return confirm('Keluar ?')"><i class="fas fa-sign-out-alt me-2"></i>Keluar</a> 
+                onclick="return confirm('Keluar ?')">Keluar</a>
             </div>
         </div>
         <div id="page-content-wrapper">
@@ -35,18 +40,18 @@
 <!-- Page Content -->
             <div class="container">
                 <div class="row my-4">
-                    <h3 class="fs-4 warna-1 text-center mb-4">Membuat User</h3>
+                    <h3 class="fs-4 warna-1 text-center mb-4">Edit User</h3>
                     <form method="POST" class="warna-1 mx-auto px-5" style="width: 700px;">
                         <div class="row pb-3">
                             <div class="col-3"><label>ID User</label></div>
                             <div class="col">
-                                <input type="text" class="form-control" name="id_user">
+                                <input type="text" readonly class="form-control" name="id_user" value="<?php echo $row['id_user'] ?>">
                             </div>
                         </div>
                         <div class="row pb-3">
                             <div class="col-3"><label>Nama</label></div>
                             <div class="col">
-                                <input type="text" class="form-control form-box" name="nama">
+                                <input type="text" class="form-control form-box" name="nama" value="<?php echo $row['nama'] ?>">
                             </div>
                         </div>
                         <div class="row pb-3">
@@ -58,59 +63,20 @@
                         <div class="row pb-3">
                             <div class="col-3"><label>Hak Akses</label></div>
                             <div class="col">
-                                <select name="hak_akses" class="form-select">
-                                    <option value="Pemilik">Pemilik</option>
-                                    <option value="Teller">Teller</option>
-                                    <option value="Teknisi">Teknisi</option>
-                                    <option value="Customer">Customer</option>
+                                <select name="hak_akses" class="form-select" >
+                                    <option <?php if ($row['hak_akses'] == "Pemilik") { echo 'selected'; }?> value="Pemilik">Pemilik</option>
+                                    <option <?php if ($row['hak_akses'] == "Teller") { echo 'selected'; }?> value="Teller">Teller</option>
+                                    <option <?php if ($row['hak_akses'] == "Teknisi") { echo 'selected'; }?> value="Teknisi">Teknisi</option>
+                                    <option <?php if ($row['hak_akses'] == "Customer") { echo 'selected'; }?> value="Customer">Customer</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row text-center">
                             <div class="col ps-5">
-                                <button class="btn btn-primary" type="submit" style="width: 30%;" name="tambahUser">Buat</button>
+                                <button class="btn btn-primary" type="submit" style="width: 30%;" name="updateUser">Simpan</button>
                             </div>
                         </div>
                     </form>
-                </div>
-<!-- Data User -->
-                <div class="row">
-                    <h4 class="h4 warna-1 text-center mb-3">Data User</h4>
-                    <div class="table-responsive-xxl">
-                        <table class="table table-bordered border-primary align-middle text-center  mx-auto" style="min-width: 800px;">
-                            <thead class="table-dark border-light">
-                                <tr>
-                                    <th style="width: 20%;">ID User</th>
-                                    <th style="width: 30%;">Nama</th>
-                                    <th style="width: 20%;">Hak Akses</th>
-                                    <th style="width: 10%;">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-light border-dark">
-                                <?php
-                                    while ($row = mysqli_fetch_array($query)){
-                                        echo '
-                                        <form method="POST">
-                                            <div class="invisible position-absolute">
-                                                <input type="text" class="form-control" name="getID" value="'.$row['id_user'].'">
-                                            </div>
-                                            <tr>
-                                                <td>'.$row['id_user'].'</td>
-                                                <td>'.$row['nama'].'</td>
-                                                <td>'.$row['hak_akses'].'</td>
-                                                <td>
-                                                    '?><button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit User?')">
-                                                    <i class="far fa-edit"></i></button><?php echo'
-                                                    '?><button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus User?')">
-                                                    <i class="far fa-trash-alt"></i></button><?php echo'
-                                                </td>
-                                            </tr>
-                                        </form>';
-                                    }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
             </div>  
         </div>
