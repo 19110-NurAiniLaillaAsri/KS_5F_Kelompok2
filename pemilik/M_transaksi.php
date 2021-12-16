@@ -59,8 +59,8 @@
                                     <td>61</td>
                                     <td>61</td>
                                     <td>
-                                        <button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit user ?')"><i class="far fa-edit"></i></button>
-                                        <button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus user ?')"><i class="far fa-trash-alt"></i></button>
+                                        <button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit Transaksi?')"><i class="far fa-edit"></i></button>
+                                        <button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus Transaksi?')"><i class="far fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
                                 </tbody>
