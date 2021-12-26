@@ -94,3 +94,122 @@
                                     <th style="width: 100px;">Detail</th>
                                 </tr>
                                 
+                            </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $no = 1;
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){?>
+                                        <div class="invisible position-absolute">
+                                            <input type="text" class="form-control" name="id_motor" value="'.$row['id_motor'].'">
+                                        </div>
+                                        <tr>
+                                            <td><?php echo $no++ ?></td>
+                                            <td><?php echo $row['id_transaksi'] ?></td>
+                                            <td><?php echo $row['id_motor'] ?></td>
+                                            <td><?php echo $row['id_user'] ?></td>
+                                            <td><?php echo $row['tgl_transaksi'] ?></td>
+                                            <td><?php echo $row['status_transaksi'] ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail<?php echo $row['id_transaksi'] ?>"><i class="fas fa-search"></i></button>
+                                            </td>
+                                            <div class="modal fade" id="detail<?php echo $row['id_transaksi'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Data Kendaraaan</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <img src="../fotoMotor/<?php echo $row['foto'] ?>" class="my-2 rounded" style="max-height:200px;">
+                                                        </div>
+                                                        <div class="modal-body mx-2">
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['nama_pemilik'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Plat No</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['plat_no'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Merk</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['merk'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Type</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['type'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Warna</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['warna'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Tahun Pembuatan</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['tahun_pembuatan'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Masa Berlaku STNK</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['masa_berlaku_stnk'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Pajak</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['pajak'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Harga Jual</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['harga_jual'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5 mt-1"><label>Odometer</label></div>
+                                                            <div class=col>
+                                                                <input class="form-control" type="text" readonly value="<?php echo $row['odometer'] ?>"><br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </tr><?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+<!-- Javascript -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+</body>
+</html>
+                               
