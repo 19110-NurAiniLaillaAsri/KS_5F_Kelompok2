@@ -55,3 +55,13 @@
                                     <th>Alamat</th>
                                     <th>Jabatan</th>
                                 </tr>
+                            </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){?>
+                                        <div class="invisible position-absolute">
+                                            <input type="text" class="form-control" name="id_user" value="<?php echo $row['id_user'] ?>">
+                                        </div>
+                                        <tr>
+                                            <td><?php echo $row['nama'] ?></td>
