@@ -64,3 +64,26 @@
             ";
         }
     }
+//Batal Transaksi
+    else if(isset($_POST["batalTransaksi"])){
+        $id_transaksi = $_POST["id_transaksi"];
+        $id_motor = $_POST["id_motor"];
+        $queryDataMotor = mysqli_query($koneksi, "UPDATE data_motor SET status = 'Tersedia' WHERE id_motor = '$id_motor'");
+        $queryDataTransaksi = mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi = 'Batal' WHERE id_transaksi = '$id_transaksi'");
+        if ($queryDataTransaksi){
+            echo "
+                <script>
+                    alert('Berhasil membatalkan Transaksi!');
+                    document.location.href = 'M_transaksi.php';
+                </script>
+            ";
+        }
+        else{
+            echo "
+                <script>
+                    alert('Gagal membatalkan Transaksi!');
+                    document.location.href = 'M_transaksi.php';
+                </script>
+            ";
+        }
+    }
