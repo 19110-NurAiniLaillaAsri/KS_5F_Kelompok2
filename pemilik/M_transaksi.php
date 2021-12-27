@@ -71,6 +71,67 @@
             </div>  
         </div>
     </div>
+<!-- Modal Tambah Transaksi -->
+                <form method="POST" class="mx-2" enctype="multipart/form-data">
+                    <div class="modal fade" id="tambahTransaksi" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="headerLabel">Tambah Transaksi</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>ID Motor</label></div>
+                                        <div class=col> 
+                                            <!-- manggil nama motor pake id motor yg ada -->
+                                            <select name="id_motor" class="form-select">
+                                                <?php
+                                                    $getdataMotor = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE status = 'Tersedia'");
+                                                    while ($rowMotor = mysqli_fetch_array($getdataMotor)) {
+                                                        $id_motor = $rowMotor['id_motor'];
+                                                ?>
+                                                <option value="<?=$id_motor;?>"><?=$id_motor;?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>User</label></div>
+                                        <div class=col> 
+                                            <?php
+                                                $getdataUser = mysqli_query($koneksi, "SELECT * FROM user WHERE hak_akses='Customer'");
+                                                while ($rowUser = mysqli_fetch_array($getdataUser)) {
+                                                    $id_user = $rowUser['id_user'];
+                                                    $nama = $rowUser['nama'];
+                                                ?>
+                                                <select name="id_user" class="form-select">
+                                                    <option value="<?=$id_user;?>"><?=$nama;?></option>
+                                                </select><?php
+                                                } ?>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Bukti Transaksi</label></div>
+                                        <div class=col>
+                                            <input type="file" class="form-control form-box" name="bukti_transfer" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">  
+                                        <div class="col-md-12 d-flex justify-content-end">
+                                            <button name="tambahTransaksi" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertTambahTransaksiModal">Simpan</button>
+                                        </div>                                     
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form> 
+            </div>  
+        </div>
+    </div>
 <!-- Javascript -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
