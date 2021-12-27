@@ -323,4 +323,48 @@
                         </table>
                     </div>
                 </div>
+                <!-- Modal Tambah Data -->
+                <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="headerLabel">Tambah Data Motor</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="POST" class="mx-2" enctype="multipart/form-data">
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="nama_pemilik" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Plat No</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="plat_no" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Merk</label></div>
+                                        <div class=col>
+                                            <select name="merk" class="form-select">
+                                                <option value="Honda">Honda</option>
+                                                <option value="Yamaha">Yamaha</option>
+                                                <option value="Kawasaki">Kawasaki</option>
+                                                <option value="Suzuki">Suzuki</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Harley Davidson">Harley Davidson</option>
+                                                <option value="Ducati">Ducati</option>
+                                                <option value="KTM">KTM</option>
+                                                <option value="TVS">TVS</option>
+                                                <option value="Benelli">Benelli</option>
+                                                <option value="Benelli">Aprilia</option>
+                                                <option value="MV Agusta">MV Agusta</option>
+                                                <option value="Triump">Triump</option>
+                                                <option value="Vespa">Vespa</option>
+                                                <option value="Viar">Viar</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
