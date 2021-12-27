@@ -18,3 +18,13 @@
                 <a href="index.php" class="list-group-item list-group-item-action bg-transparent fw-bold warna-1"><i class="fas fa-home me-2"></i>Home</a>
                 <a href="M_transaksi.php" class="list-group-item list-group-item-action bg-transparent active-bar fw-bold"><i class="fas fa-tags me-2"></i>Transaksi</a>
                 <a href="M_Admin.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-users me-2"></i>Kontak Admin</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-2 py-4 px-4">
+                <div class="d-flex align-items-center me-auto">
+                    <i class="fas fa-align-left warna-1 fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0 warna-1">Menu</h2>
+                </div>
+                <div class="dropdown ms-3">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i><?= ucfirst($_SESSION['nama']);?></a>
