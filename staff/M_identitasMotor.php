@@ -127,3 +127,15 @@
                                                                         <input class="form-control" type="text" readonly value="'.$merk[$i].'"><br>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Type</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$type[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Warna</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$warna[$i].'"><br>
+                                                                    </div>
+                                                                </div>
