@@ -267,4 +267,16 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
+                                                                <div class="modal-footer">
+                                                                    <div class="row">  
+                                                                        <div class="col-md-12 d-flex justify-content-end">
+                                                                            <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
+                                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                                                        </div>                                     
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
