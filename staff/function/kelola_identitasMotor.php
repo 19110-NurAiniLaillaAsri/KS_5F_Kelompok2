@@ -29,4 +29,14 @@
         $id_motor = $huruf . sprintf("%04s", $urutan);
         
         // Upload Foto Motor
+        $namaAsli = $_FILES['foto']['name'];
+        $x = explode('.',$namaAsli);
+        $eks = strtolower(end($x));
+        $asal = $_FILES['foto']['tmp_name'];
+        $dir = "../fotoMotor/";
+        $foto = uniqid();
+        $foto .= '.'.$eks;
+        $targetFile = $dir.$foto;
+        $uploadOk = 1;
+        
 ?>
