@@ -153,4 +153,13 @@
                 </script>
             ";
         }
+        else{
+            echo "
+                <script>
+                    alert('Gagal Menghapus Motor!');
+                    document.location.href = 'M_identitasMotor.php';
+                </script>
+            ";
+        }
+    }
 ?>
