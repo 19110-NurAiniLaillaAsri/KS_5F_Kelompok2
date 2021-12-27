@@ -244,3 +244,39 @@
                                                                     <div class=col>
                                                                         <input class="form-control" name="harga_jual" type="number" value="'.$row['harga_jual'].'" required><br>
                                                                     </div>
+                                                                    </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Odometer</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="odometer" type="text" value="'.$row['odometer'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Foto</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="foto" type="file"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mb-2">
+                                                                    <div class="col-5 mt-1"><label>Status</label></div>
+                                                                    <div class=col>
+                                                                        <select class="form-select" name="status">
+                                                                            <option '?> <?php if ($row['status'] == "Tersedia") { echo 'selected'; }?> <?php echo ' value="Tersedia">Tersedia</option>
+                                                                            <option '?> <?php if ($row['status'] == "Booked") { echo 'selected'; }?> <?php echo ' value="Booked">Booked</option>
+                                                                            <option '?> <?php if ($row['status'] == "Terjual") { echo 'selected'; }?> <?php echo ' value="Terjual">Terjual</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <div class="row">  
+                                                                        <div class="col-md-12 d-flex justify-content-end">
+                                                                            <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
+                                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                                                        </div>                                     
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
