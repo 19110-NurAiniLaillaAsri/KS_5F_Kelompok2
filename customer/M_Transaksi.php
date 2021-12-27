@@ -38,3 +38,13 @@
                     </ul>
                 </div>
                 <?php include 'settingUser.php'; ?>
+            </nav>
+<!-- Page Content -->
+            <div class="container-fluid mx-4">
+                <div class="row">
+                    <h1 class="text-center warna-1 pb-3">Daftar Transaksi</h1>
+                </div>
+                <div class="row">
+                    <?php
+                    $getDataMotor = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE status = 'Tersedia'");
+                    while ($rowTransaksi = mysqli_fetch_array($getDataMotor)){ ?>
