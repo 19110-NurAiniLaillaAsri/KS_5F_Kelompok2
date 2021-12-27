@@ -139,3 +139,16 @@
                                                                         <input class="form-control" type="text" readonly value="'.$warna[$i].'"><br>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Tahun Pembuatan</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$tahun_pembuatan[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Masa Berlaku STNK</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$masa_berlaku_stnk[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+    
