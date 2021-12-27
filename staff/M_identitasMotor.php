@@ -84,3 +84,15 @@
                                             <div class="invisible position-absolute">
                                                 <input type="text" class="form-control" name="id_motor" value="'.$id_motor[$i].'">
                                             </div>
+                                            <tr>
+                                                <td>'.$no++.'</td>
+                                                <td>'.$merk[$i].'</td>
+                                                <td>'.$nama_pemilik[$i].'</td>
+                                                <td>'.$warna[$i].'</td>
+                                                <td>Rp. '.number_format($harga_jual[$i], 0, ',', '.').'</td>
+                                                <td>'.$status[$i].'</td>
+                                                <td style="width: 160px;">
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail'.$id_motor[$i].'"><i class="fas fa-search"></i></button>
+                                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit'.$id_motor[$i].'"><i class="far fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus'.$id_motor[$i].'"><i class="far fa-trash-alt"></i></button>
+                                                </td>'?>  
