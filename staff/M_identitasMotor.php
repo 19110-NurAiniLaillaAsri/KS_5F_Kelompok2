@@ -46,3 +46,17 @@
                     <div class="row d-flex justify-content-end">
                         <button type="button" class="btn btn-primary my-3" style="width: 180px;" data-bs-toggle="modal" data-bs-target="#tambahData"><i class="fas fa-plus-circle me-3"></i>Tambah Data</button>
                     </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-primary align-middle text-center mx-auto" style="min-width: 800px;">
+                            <thead class="table-dark border-light">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Merk</th>
+                                    <th>Nama Pemilik</th>
+                                    <th>Warna</th>
+                                    <th>Harga Jual</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                                
+                            </thead>
