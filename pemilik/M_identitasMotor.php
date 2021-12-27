@@ -97,3 +97,75 @@
                                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit'.$id_motor[$i].'"><i class="far fa-edit"></i></button>
                                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus'.$id_motor[$i].'"><i class="far fa-trash-alt"></i></button>
                                                 </td>'?>   
+                                <!-- Modal Detail Data -->
+                                                <?php echo '
+                                                <div class="modal fade" id="detail'.$id_motor[$i].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Data Kendaraaan</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <img src="../fotoMotor/'.$foto[$i].'" class="my-2 rounded" style="max-height:200px;">
+                                                            </div>
+                                                            <div class="modal-body mx-2">
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$nama_pemilik[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Plat No</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$plat_no[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Merk</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$merk[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Type</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$type[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Warna</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$warna[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Tahun Pembuatan</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$tahun_pembuatan[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Masa Berlaku STNK</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$masa_berlaku_stnk[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Pajak</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$pajak[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Asli</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$harga_asli[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Jual</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$harga_jual[$i].'"><br>
+                                                                    </div>
