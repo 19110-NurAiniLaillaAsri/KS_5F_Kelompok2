@@ -25,3 +25,13 @@
         </div>
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-2 py-4 px-4">
+                <div class="d-flex align-items-center me-auto">
+                    <i class="fas fa-align-left warna-1 fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0 warna-1">Menu</h2>
+                </div>
+                <div class="dropdown ms-3">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i><?= ucfirst($_SESSION['nama']);?></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
+                            <i class="fas fa-cog me-3"></i>Setting</button>
