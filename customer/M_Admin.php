@@ -35,3 +35,13 @@
                         <li>
                             <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
                             <i class="fas fa-cog me-3"></i>Setting</button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
+                    </ul>
+                </div>
+                <?php require 'settingUser.php'; ?>
+            </nav>
+<!-- Data User -->
+            <div class="container">
+                <div class="row mx-3">
