@@ -28,3 +28,13 @@
                 </div>
                 <div class="dropdown ms-3">
                     <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i><?= ucfirst($_SESSION['nama']);?></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
+                            <i class="fas fa-cog me-3"></i>Setting</button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
+                    </ul>
+                </div>
+                <?php include 'settingUser.php'; ?>
