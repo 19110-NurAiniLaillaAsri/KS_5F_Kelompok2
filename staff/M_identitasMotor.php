@@ -105,3 +105,13 @@
                                                                 <h5 class="modal-title" id="exampleModalLabel">Data Kendaraaan</h5>
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
+                                                            <div class="text-center">
+                                                                <img src="../fotoMotor/'.$foto[$i].'" class="my-2 rounded" style="max-height:200px;">
+                                                            </div>
+                                                            <div class="modal-body mx-2">
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$nama_pemilik[$i].'"><br>
+                                                                    </div>
+                                                                </div>
