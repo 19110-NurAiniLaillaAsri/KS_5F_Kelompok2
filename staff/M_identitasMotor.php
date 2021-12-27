@@ -157,3 +157,15 @@
                                                                         <input class="form-control" type="text" readonly value="'.$pajak[$i].'"><br>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Asli</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$harga_asli[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Jual</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$harga_jual[$i].'"><br>
+                                                                    </div>
+                                                                </div>
