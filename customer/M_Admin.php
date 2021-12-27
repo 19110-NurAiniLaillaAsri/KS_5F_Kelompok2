@@ -65,3 +65,13 @@
                                         </div>
                                         <tr>
                                             <td><?php echo $row['nama'] ?></td>
+                                            <td><?php echo $row['no_hp'] ?></td>
+                                            <td><?php echo $row['alamat'] ?></td>
+                                            <td><?php echo $row['hak_akses'] ?></td>
+                                        </tr>
+                                    <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>  
