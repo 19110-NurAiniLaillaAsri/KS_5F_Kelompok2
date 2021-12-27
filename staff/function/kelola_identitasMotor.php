@@ -39,4 +39,7 @@
         $targetFile = $dir.$foto;
         $uploadOk = 1;
         
+        if (file_exists($targetFile)){
+            $uploadOk = 0;
+        }
 ?>
