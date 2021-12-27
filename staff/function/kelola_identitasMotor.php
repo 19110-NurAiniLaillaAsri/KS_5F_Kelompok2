@@ -134,4 +134,23 @@
             }
         }
     }
+//Delete Identitas Motor
+    else if(isset($_POST["hapusMotor"])){
+        $id_motor = $_POST["id_motor"];
+        $cariFile = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE id_motor = '$id_motor'") or die(mysqli_error($koneksi));
+        $cariRow = mysqli_fetch_array($cariFile);
+        $namaFile = $cariRow['fotoMotor'];
+        $lokasi = "../fotoMotor/".$namaFile;
+        if (file_exists($lokasi)){
+            unlink($lokasi);
+        }
+        $queryDeleteMotor = mysqli_query($koneksi, "DELETE FROM data_motor WHERE id_motor = '$id_motor'") or die($koneksi);
+        if ($queryDeleteMotor){
+            echo "
+                <script>
+                    alert('Berhasil Menghapus Motor!');
+                    document.location.href = 'M_identitasMotor.php';
+                </script>
+            ";
+        }
 ?>
