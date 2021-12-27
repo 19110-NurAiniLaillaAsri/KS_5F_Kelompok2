@@ -324,3 +324,19 @@
                         </table>
                     </div>
                 </div>
+                <!-- Modal Tambah Data -->
+                <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="headerLabel">Tambah Data Motor</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="POST" class="mx-2" enctype="multipart/form-data">
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="nama_pemilik" required>
+                                        </div>
+                                    </div>
