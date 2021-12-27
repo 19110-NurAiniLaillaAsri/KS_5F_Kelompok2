@@ -8,3 +8,9 @@
                                     <h5 class="modal-title" id="headerLabel">Tambah Transaksi</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
+                                <div class="modal-body">
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>ID Motor</label></div>
+                                        <div class=col> 
+                                            <!-- manggil nama motor pake id motor yg ada -->
+                                            <select name="id_motor" class="form-select">
