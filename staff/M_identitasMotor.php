@@ -416,4 +416,23 @@
                                             <input type="number" class="form-control form-box" name="harga_asli" required>
                                         </div>
                                     </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Harga Jual</label></div>
+                                        <div class=col>
+                                            <input type="number" class="form-control form-box" name="harga_jual" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">  
+                                        <div class="col-md-12 d-flex justify-content-end">
+                                            <button name="tambahMotor" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                        </div>                                     
+                                    </div> 
+                                </form>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                                     
