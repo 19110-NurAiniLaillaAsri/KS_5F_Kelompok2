@@ -250,4 +250,21 @@
                                                                     <div class=col>
                                                                         <input class="form-control" name="odometer" type="text" value="'.$row['odometer'].'" required><br>
                                                                     </div>
+                                                                      </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Foto</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="foto" type="file"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mb-2">
+                                                                    <div class="col-5 mt-1"><label>Status</label></div>
+                                                                    <div class=col>
+                                                                        <select class="form-select" name="status">
+                                                                            <option '?> <?php if ($row['status'] == "Tersedia") { echo 'selected'; }?> <?php echo ' value="Tersedia">Tersedia</option>
+                                                                            <option '?> <?php if ($row['status'] == "Booked") { echo 'selected'; }?> <?php echo ' value="Booked">Booked</option>
+                                                                            <option '?> <?php if ($row['status'] == "Terjual") { echo 'selected'; }?> <?php echo ' value="Terjual">Terjual</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
 
