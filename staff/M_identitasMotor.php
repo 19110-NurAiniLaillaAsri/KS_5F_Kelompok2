@@ -183,3 +183,16 @@
                                                     </div>
                                                 </div>
                                                 '?>  
+<!-- Modal Edit Motor -->
+                                                <?php echo '
+                                                <div class="modal fade" id="edit'.$id_motor[$i].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Edit Data Motor</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="invisible position-absolute">
+                                                                    <input type="text" class="form-control" name="id_motor" value="'.$id_motor[$i].'">
+                                                                </div>                                
