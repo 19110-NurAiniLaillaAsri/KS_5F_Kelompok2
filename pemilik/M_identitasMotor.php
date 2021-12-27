@@ -297,4 +297,30 @@
                                                         </div>
                                                     </div>
                                                 </div> 
+                                                <!-- Tombol Konfirmasi Hapus -->
+                                                <div class="modal fade" id="hapus'.$id_motor[$i].'" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
+                                                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Hapus Motor !</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Hapus Motor '.$id_motor[$i].' ?<br>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                                                <button name="hapusMotor" type="submit" class="btn btn-primary">Hapus</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                            </tr>
+                                        </form>';
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
