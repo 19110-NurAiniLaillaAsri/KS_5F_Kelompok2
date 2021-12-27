@@ -368,4 +368,28 @@
                                             </select>
                                         </div>
                                     </div>
+                                                                        <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Type</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="type" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Warna</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="warna" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Tahun Pembuatan</label></div>
+                                        <div class=col>
+                                            <input type="number" class="form-control form-box" name="tahun_pembuatan">
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Masa Berlaku STNK</label></div>
+                                        <div class=col>
+                                            <input type="date" class="form-control form-box" name="masa_berlaku_stnk" required>
+                                        </div>
+                                    </div>
                                     
