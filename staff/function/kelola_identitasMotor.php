@@ -90,4 +90,29 @@
                 </script>
             ";
         }
+        else{
+            // Hapus Gambar Lama
+            $cariFile = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE id_motor = '$id_motor'") or die(mysqli_error($koneksi));
+            $cariRow = mysqli_fetch_array($cariFile);
+            $namaFile = $cariRow['foto'];
+            $lokasi = "../fotoMotor/".$namaFile;
+            if (file_exists($lokasi)){
+                unlink($lokasi);
+            }
+            $x = explode('.',$namaAsli);
+            $eks = strtolower(end($x));
+            $asal = $_FILES['foto']['tmp_name'];
+            $dir = "../fotoMotor/";
+            $foto = uniqid();
+            $foto .= '.'.$eks;
+            $targetFile = $dir.$foto;
+            $uploadOk = 1;
+            // Cek apakah file sudah ada difolder ?
+            if (file_exists($targetFile)){
+                $uploadOk = 0;
+            }
+            // Cek Proses Upload
+            if ($uploadOk == 0){
+                echo '<script>alert("Nama file sudah ada!");</script>';
+            } 
 ?>
