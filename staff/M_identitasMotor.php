@@ -96,3 +96,12 @@
                                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit'.$id_motor[$i].'"><i class="far fa-edit"></i></button>
                                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus'.$id_motor[$i].'"><i class="far fa-trash-alt"></i></button>
                                                 </td>'?>  
+<!-- Modal Detail Data -->
+                                                <?php echo '
+                                                <div class="modal fade" id="detail'.$id_motor[$i].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Data Kendaraaan</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
