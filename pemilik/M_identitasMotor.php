@@ -40,3 +40,60 @@
                 </div>
                 <?php require 'settingUser.php'; ?>
             </nav>
+            <!-- Page Content -->
+            <div class="container-fluid">
+                <div class="row mx-2">
+                    <h4 class="h4 warna-1 text-center">Data Kendaraan</h4>
+                    <div class="row d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary my-3" style="width: 180px;" data-bs-toggle="modal" data-bs-target="#tambahData"><i class="fas fa-plus-circle me-3"></i>Tambah Data</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-primary align-middle text-center mx-auto" style="min-width: 800px;">
+                            <thead class="table-dark border-light">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Merk</th>
+                                    <th>Nama Pemilik</th>
+                                    <th>Warna</th>
+                                    <th>Harga Jual</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                                
+                            </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $no = 1;
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){
+                                        $foto[$i] = $row['foto'];
+                                        $id_motor[$i] = $row["id_motor"];
+                                        $nama_pemilik[$i] = $row["nama_pemilik"];
+                                        $plat_no[$i] = $row["plat_no"];
+                                        $merk[$i] = $row["merk"];
+                                        $type[$i] = $row["type"];
+                                        $warna[$i] = $row["warna"];
+                                        $tahun_pembuatan[$i] = $row["tahun_pembuatan"];
+                                        $masa_berlaku_stnk[$i] = $row["masa_berlaku_stnk"];
+                                        $pajak[$i] = $row["pajak"];
+                                        $harga_asli[$i] = $row["harga_asli"];
+                                        $harga_jual[$i] = $row["harga_jual"];
+                                        $odometer[$i] = $row["odometer"];
+                                        $status[$i] = $row["status"];
+                                        echo '
+                                        <form method="post" enctype="multipart/form-data">
+                                            <div class="invisible position-absolute">
+                                                <input type="text" class="form-control" name="id_motor" value="'.$id_motor[$i].'">
+                                            </div>
+                                            <tr>
+                                                <td>'.$no++.'</td>
+                                                <td>'.$merk[$i].'</td>
+                                                <td>'.$nama_pemilik[$i].'</td>
+                                                <td>'.$warna[$i].'</td>
+                                                <td>Rp. '.number_format($harga_jual[$i], 0, ',', '.').'</td>
+                                                <td>'.$status[$i].'</td>
+                                                <td style="width: 160px;">
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail'.$id_motor[$i].'"><i class="fas fa-search"></i></button>
+                                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit'.$id_motor[$i].'"><i class="far fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus'.$id_motor[$i].'"><i class="far fa-trash-alt"></i></button>
+                                                </td>'?>   
