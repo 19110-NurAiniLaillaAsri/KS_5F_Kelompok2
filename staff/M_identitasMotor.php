@@ -392,4 +392,28 @@
                                             <input type="date" class="form-control form-box" name="masa_berlaku_stnk" required>
                                         </div>
                                     </div>
+                                     <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Pajak Progresif</label></div>
+                                        <div class=col>
+                                            <input type="date" class="form-control form-box" name="pajak" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Odometer</label></div>
+                                        <div class=col>
+                                            <input type="number" class="form-control form-box" name="odometer" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Foto</label></div>
+                                        <div class=col>
+                                            <input type="file" class="form-control form-box" name="foto" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Harga Asli</label></div>
+                                        <div class=col>
+                                            <input type="number" class="form-control form-box" name="harga_asli" required>
+                                        </div>
+                                    </div>
                                     
