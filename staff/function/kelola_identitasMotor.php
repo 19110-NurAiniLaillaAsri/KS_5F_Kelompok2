@@ -77,5 +77,17 @@
         $harga_jual = $_POST["harga_jual"];
         $odometer = $_POST["odometer"];
         $status = $_POST["status"];
-    
+        // File Upload
+        $namaAsli = $_FILES['foto']['name'];
+        if($namaAsli==""){
+            $queryUpdateMotor = mysqli_query($koneksi, "UPDATE data_motor SET nama_pemilik='$nama_pemilik', plat_no='$plat_no', warna='$warna', 
+            tahun_pembuatan='$tahun_pembuatan' , masa_berlaku_stnk='$masa_berlaku_stnk', pajak='$pajak', harga_asli='$harga_asli', harga_jual='$harga_jual', 
+            odometer='$odometer', status='$status' WHERE id_motor = '$id_motor'") or die(mysqli_error($koneksi));
+            echo "
+                <script>
+                    alert('Berhasil Update Data Motor!');
+                    document.location.href = 'M_identitasMotor.php';
+                </script>
+            ";
+        }
 ?>
