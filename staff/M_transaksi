@@ -29,3 +29,13 @@
                                     <div class="row py-1">
                                         <div class="col-5 mt-1"><label>User</label></div>
                                         <div class=col>
+                                                <?php
+                                                $getdataUser = mysqli_query($koneksi, "SELECT * FROM user WHERE hak_akses='Customer'");
+                                                while ($rowUser = mysqli_fetch_array($getdataUser)) {
+                                                    $id_user = $rowUser['id_user'];
+                                                    $nama = $rowUser['nama'];
+                                                ?>
+                                                <select name="id_user" class="form-select">
+                                                    <option value="<?=$id_user;?>"><?=$nama;?></option>
+                                                </select><?php
+                                                };
