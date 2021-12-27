@@ -45,3 +45,13 @@
 <!-- Data User -->
             <div class="container">
                 <div class="row mx-3">
+                    <h4 class="h4 warna-1 text-center mb-3">Kontak Pemilik/Staff</h4>
+                    <div class="table-responsive-xxl">
+                        <table class="table table-bordered border-primary align-middle text-center  mx-auto" style="min-width: 800px;">
+                            <thead class="table-dark border-light">
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>No HP</th>
+                                    <th>Alamat</th>
+                                    <th>Jabatan</th>
+                                </tr>
