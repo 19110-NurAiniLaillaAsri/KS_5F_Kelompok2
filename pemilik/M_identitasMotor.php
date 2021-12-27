@@ -184,3 +184,34 @@
                                                     </div>
                                                 </div>
                                                 '?>   
+                                <!-- Modal Edit Motor -->
+                                                <?php echo '
+                                                <div class="modal fade" id="edit'.$id_motor[$i].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Edit Data Motor</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="invisible position-absolute">
+                                                                    <input type="text" class="form-control" name="id_motor" value="'.$id_motor[$i].'">
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Nama Pemilik</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="nama_pemilik" type="text" value="'.$row['nama_pemilik'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Plat No</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="plat_no" type="text" value="'.$row['plat_no'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Warna</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="warna" type="text" value="'.$row['warna'].'" required><br>
+                                                                    </div>
+                                                                </div>
