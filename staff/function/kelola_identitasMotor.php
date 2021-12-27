@@ -115,4 +115,23 @@
             if ($uploadOk == 0){
                 echo '<script>alert("Nama file sudah ada!");</script>';
             } 
+            else {
+                if (move_uploaded_file($asal, $targetFile)){
+                    $queryUpdateMotor = mysqli_query($koneksi, "UPDATE data_motor SET nama_pemilik='$nama_pemilik', plat_no='$plat_no', warna='$warna', 
+                    tahun_pembuatan='$tahun_pembuatan' , masa_berlaku_stnk='$masa_berlaku_stnk', pajak='$pajak', harga_asli='$harga_asli', harga_jual='$harga_jual', 
+                    odometer='$odometer', status='$status', foto='$foto' WHERE id_motor = '$id_motor'") or die(mysqli_error($koneksi));
+                    if ($updateMotor){
+                        echo "
+                            <script>
+                                alert('Berhasil Update Data Motor!');
+                                document.location.href = 'M_identitasMotor.php';
+                            </script>
+                        ";
+                    }
+                } else {
+                    echo '<script>alert("Proses Upload GAGAL!");</script>';
+                }
+            }
+        }
+    }
 ?>
