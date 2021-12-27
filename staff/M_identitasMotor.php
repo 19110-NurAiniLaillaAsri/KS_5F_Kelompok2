@@ -37,3 +37,12 @@
                         <li><a class="dropdown-item" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
                     </ul>
                 </div>
+                <?php require 'settingUser.php'; ?>
+            </nav>
+<!-- Page Content -->
+            <div class="container-fluid">
+                <div class="row mx-2">
+                    <h4 class="h4 warna-1 text-center">Data Kendaraan</h4>
+                    <div class="row d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary my-3" style="width: 180px;" data-bs-toggle="modal" data-bs-target="#tambahData"><i class="fas fa-plus-circle me-3"></i>Tambah Data</button>
+                    </div>
