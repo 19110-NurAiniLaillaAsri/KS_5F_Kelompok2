@@ -25,4 +25,8 @@
         $id_laptop = $data['id_terbesar'];
         $urutan = (int) substr($id_laptop, 3, 4);
         $urutan++;
+        $huruf = "MTR";
+        $id_motor = $huruf . sprintf("%04s", $urutan);
+        
+        // Upload Foto Motor
 ?>
