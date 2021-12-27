@@ -60,3 +60,27 @@
                                 </tr>
                                 
                             </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $no = 1;
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){
+                                        $foto[$i] = $row['foto'];
+                                        $id_motor[$i] = $row["id_motor"];
+                                        $nama_pemilik[$i] = $row["nama_pemilik"];
+                                        $plat_no[$i] = $row["plat_no"];
+                                        $merk[$i] = $row["merk"];
+                                        $type[$i] = $row["type"];
+                                        $warna[$i] = $row["warna"];
+                                        $tahun_pembuatan[$i] = $row["tahun_pembuatan"];
+                                        $masa_berlaku_stnk[$i] = $row["masa_berlaku_stnk"];
+                                        $pajak[$i] = $row["pajak"];
+                                        $harga_asli[$i] = $row["harga_asli"];
+                                        $harga_jual[$i] = $row["harga_jual"];
+                                        $odometer[$i] = $row["odometer"];
+                                        $status[$i] = $row["status"];
+                                        echo '
+                                        <form method="post" enctype="multipart/form-data">
+                                            <div class="invisible position-absolute">
+                                                <input type="text" class="form-control" name="id_motor" value="'.$id_motor[$i].'">
+                                            </div>
