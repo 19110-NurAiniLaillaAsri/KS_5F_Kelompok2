@@ -340,3 +340,32 @@
                                             <input type="text" class="form-control form-box" name="nama_pemilik" required>
                                         </div>
                                     </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Plat No</label></div>
+                                        <div class=col>
+                                            <input type="text" class="form-control form-box" name="plat_no" required>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Merk</label></div>
+                                        <div class=col>
+                                            <select name="merk" class="form-select">
+                                                <option value="Honda">Honda</option>
+                                                <option value="Yamaha">Yamaha</option>
+                                                <option value="Kawasaki">Kawasaki</option>
+                                                <option value="Suzuki">Suzuki</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Harley Davidson">Harley Davidson</option>
+                                                <option value="Ducati">Ducati</option>
+                                                <option value="KTM">KTM</option>
+                                                <option value="TVS">TVS</option>
+                                                <option value="Benelli">Benelli</option>
+                                                <option value="Benelli">Aprilia</option>
+                                                <option value="MV Agusta">MV Agusta</option>
+                                                <option value="Triump">Triump</option>
+                                                <option value="Vespa">Vespa</option>
+                                                <option value="Viar">Viar</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
