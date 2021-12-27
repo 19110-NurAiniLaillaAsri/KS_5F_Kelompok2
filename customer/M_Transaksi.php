@@ -48,7 +48,7 @@
                     <?php
                     $getDataMotor = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE status = 'Tersedia'");
                     while ($rowTransaksi = mysqli_fetch_array($getDataMotor)){ ?>
-                    <div class="card my-2 mx-2" style="width: 16rem;">
+                        <div class="card my-2 mx-2" style="width: 16rem;">
                             <img src="../fotoMotor/<?php echo $rowTransaksi['foto']?>" class="mt-2" style="height: 200px;">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $rowTransaksi['merk']?> <?php echo $rowTransaksi['type']?></h5>
@@ -58,3 +58,13 @@
                                 <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#beli<?php $rowTransaksi['id_motor'] ?>" style="width: 90px;">Booking</button>
                             </div>
                             <?php include 'Modal_Transaksi.php';?>
+                        </div>
+                    <?php }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Javascript -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>                        
