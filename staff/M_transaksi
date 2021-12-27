@@ -39,3 +39,11 @@
                                                     <option value="<?=$id_user;?>"><?=$nama;?></option>
                                                 </select><?php
                                                 } ?>
+                                        </div>
+                                    </div>
+                                    <div class="row py-1">
+                                        <div class="col-5 mt-1"><label>Bukti Transaksi</label></div>
+                                        <div class=col>
+                                            <input type="file" class="form-control form-box" name="bukti_transfer" required>
+                                        </div>
+                                    </div>
