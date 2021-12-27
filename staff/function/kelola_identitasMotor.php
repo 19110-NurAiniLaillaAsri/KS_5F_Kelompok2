@@ -10,10 +10,10 @@
     if(isset($_POST["tambahMotor"])) {
         $nama_pemilik = $_POST["nama_pemilik"];
         $plat_no = $_POST["plat_no"];
-        $type = $_POST["type"]
-        $warna = $_POST["Warna];
+        $type = $_POST["type"];
+        $warna = $_POST["warna];
         $tahun_pembuatan = $_POST["tahun_pembuatan"];
-        $masa_berlaku_stnk = $_POST["masa_berlaku_STNK];
+        $masa_berlaku_stnk = $_POST["masa_berlaku_stnk];
         $pajak = $_POST["pajak'];
         $harga_asli = $_POST["harga_asli"];
         $harga_jual = $_POST["harga_jual"];
