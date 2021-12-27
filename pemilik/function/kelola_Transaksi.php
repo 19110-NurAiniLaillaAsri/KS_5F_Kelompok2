@@ -48,3 +48,19 @@
             }
         }
     }
+//Update Transaksi Motor//
+    if(isset($_POST["updateTransaksi"])){
+        $id_transaksi = $_POST["id_transaksi"];
+        $id_motor = $_POST["id_motor"];
+        $id_user = $_POST["id_user"];
+        $queryDataMotor = mysqli_query($koneksi, "UPDATE data_motor SET status = 'Terjual' WHERE id_motor = '$id_motor'");
+        $queryDataTransaksi = mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi = 'Selesai' WHERE id_transaksi = '$id_transaksi'");
+        if ($queryDataTransaksi){
+            echo "
+                <script>
+                    alert('Motor Terjual, Transaksi Berhasil!');
+                    document.location.href = 'M_transaksi.php';
+                </script>
+            ";
+        }
+    }
