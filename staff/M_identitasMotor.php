@@ -115,3 +115,15 @@
                                                                         <input class="form-control" type="text" readonly value="'.$nama_pemilik[$i].'"><br>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Plat No</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$plat_no[$i].'"><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Merk</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" type="text" readonly value="'.$merk[$i].'"><br>
+                                                                    </div>
+                                                                </div>
