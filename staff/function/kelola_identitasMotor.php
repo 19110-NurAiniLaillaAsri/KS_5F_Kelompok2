@@ -55,4 +55,7 @@
             if (move_uploaded_file($asal, $targetFile)){
                 $queryCreate = "INSERT INTO data_motor VALUES ('$id_motor','$nama_pemilik','$plat_no','$merk','$type','$warna','$tahun_pembuatan','$masa_berlaku_stnk','$pajak','$harga_asli','$harga_jual','$odometer','$foto','Tersedia')";
                 $createData = mysqli_query($koneksi, $queryCreate);
+                if ($createData){
+                    echo "<script>alert('Motor berhasil ditambahkan!')
+                }
 ?>
