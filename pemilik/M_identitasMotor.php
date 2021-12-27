@@ -215,3 +215,39 @@
                                                                         <input class="form-control" name="warna" type="text" value="'.$row['warna'].'" required><br>
                                                                     </div>
                                                                 </div>
+                                                                                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Tahun Pembuatan</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="tahun_pembuatan" type="number" value="'.$row['tahun_pembuatan'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Masa Berlaku STNK</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="masa_berlaku_stnk" type="date" value="'.$row['masa_berlaku_stnk'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Pajak</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="pajak" type="date" value="'.$row['pajak'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Asli</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="harga_asli" type="number" value="'.$row['harga_asli'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Harga Jual</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="harga_jual" type="number" value="'.$row['harga_jual'].'" required><br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Odometer</label></div>
+                                                                    <div class=col>
+                                                                        <input class="form-control" name="odometer" type="text" value="'.$row['odometer'].'" required><br>
+                                                                    </div>
+
