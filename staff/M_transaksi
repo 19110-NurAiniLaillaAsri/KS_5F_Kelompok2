@@ -14,3 +14,12 @@
                                         <div class=col> 
                                             <!-- manggil nama motor pake id motor yg ada -->
                                             <select name="id_motor" class="form-select">
+                                                <?php
+                                                    $getdataMotor = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE status = 'Tersedia'");
+                                                    while ($rowMotor = mysqli_fetch_array($getdataMotor)) {
+                                                        $id_motor = $rowMotor['id_motor'];
+                                                ?>
+                                                <option value="<?=$id_motor;?>"><?=$id_motor;?></option>
+                                                <?php
+                                                    }
+                                                ?>
