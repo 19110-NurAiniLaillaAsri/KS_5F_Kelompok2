@@ -48,3 +48,13 @@
                     <?php
                     $getDataMotor = mysqli_query($koneksi, "SELECT * FROM data_motor WHERE status = 'Tersedia'");
                     while ($rowTransaksi = mysqli_fetch_array($getDataMotor)){ ?>
+                    <div class="card my-2 mx-2" style="width: 16rem;">
+                            <img src="../fotoMotor/<?php echo $rowTransaksi['foto']?>" class="mt-2" style="height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $rowTransaksi['merk']?> <?php echo $rowTransaksi['type']?></h5>
+                                <p class="card-text">Rp. <?php echo number_format($rowTransaksi['harga_jual'], 0, ',', '.')?><br>
+                                Tahun <?=$rowTransaksi['tahun_pembuatan']?></p>
+                                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#detail<?php $rowTransaksi['id_motor'] ?>" style="width: 80px;">Detail</button>
+                                <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#beli<?php $rowTransaksi['id_motor'] ?>" style="width: 90px;">Booking</button>
+                            </div>
+                            <?php include 'Modal_Transaksi.php';?>
