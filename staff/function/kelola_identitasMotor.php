@@ -59,4 +59,10 @@
                     echo "<script>alert('Motor berhasil ditambahkan!')
                     window.location.replace('M_identitasMotor.php');</script>";
                 }
+            } else {
+                echo '<script>alert("Proses Upload GAGAL!");</script>';
+            }
+        }
+    }
+    
 ?>
