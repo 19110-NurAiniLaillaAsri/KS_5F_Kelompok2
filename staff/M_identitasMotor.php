@@ -20,3 +20,9 @@
                 <a href="M_transaksi.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-tags me-2"></i>Transaksi</a>
             </div>
         </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-2 py-4 px-4">
+                <div class="d-flex align-items-center me-auto">
+                    <i class="fas fa-align-left warna-1 fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0 warna-1">Menu</h2>
+                </div>
