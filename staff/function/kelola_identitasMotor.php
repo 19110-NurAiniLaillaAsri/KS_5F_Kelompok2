@@ -4,5 +4,5 @@
 
 //Read Data Motor//
     $sqlRead = "SELECT * FROM data_motor";
-    $queryRead = mysql_query($koneksi, $sqlRead);
+    $queryRead = mysqli_query($koneksi, $sqlRead);
 ?>
