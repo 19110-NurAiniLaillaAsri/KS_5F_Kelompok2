@@ -61,3 +61,14 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                             <div class="invisible position-absolute">
                                 <input type="text" class="form-control" name="id_user" value="'.$rowSet['id_user'].'">
                             </div>
+                            <div class="row">
+                                <div class="col-5 mt-1"><label>Nama</label></div>
+                                <div class=col>
+                                    <input class="form-control" name="nama" type="text" value="'.$rowSet['nama'].'" required><br>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-5 mt-1"><label>No HP</label></div>
+                                <div class=col>
+                                    <input class="form-control" name="no_hp" type="text" value="'.$rowSet['no_hp'].'" required><br>
+                                </div>
