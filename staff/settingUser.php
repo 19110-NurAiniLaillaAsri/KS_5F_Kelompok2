@@ -38,3 +38,14 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                         document.location.href = 'index.php';
                     </script>
                 ";
+                 }
+            else{
+                echo "
+                    <script>
+                        alert('Gagal Update User!');
+                        document.location.href = 'index.php';
+                    </script>
+                ";
+            }
+        }
+    }
