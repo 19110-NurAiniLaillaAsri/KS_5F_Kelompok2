@@ -49,3 +49,15 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
             }
         }
     }
+            <form method="POST">
+            <div class="modal fade" id="edit'.$id_user.'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit Data User</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="invisible position-absolute">
+                                <input type="text" class="form-control" name="id_user" value="'.$rowSet['id_user'].'">
+                            </div>
