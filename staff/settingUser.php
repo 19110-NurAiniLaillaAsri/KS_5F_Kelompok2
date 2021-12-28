@@ -8,23 +8,3 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
         $password_baru = $_POST["password_baru"];
         $nama = $_POST["nama"];
         $no_hp = $_POST["no_hp"];
-        $alamat = $_POST["alamat"];
-        if($password_baru==""){
-            $querySet = mysqli_query($koneksi, "UPDATE user SET nama='$nama', no_hp='$no_hp', alamat='$alamat' WHERE id_user='$id_user'") or die($koneksi);
-            if ($querySet){
-                echo "
-                    <script>
-                        alert('Berhasil Update User!');
-                        document.location.href = 'index.php';
-                    </script>
-                ";
-            }
-            else{
-                echo "
-                    <script>
-                        alert('Gagal Update User!');
-                        document.location.href = 'index.php';
-                    </script>
-                ";
-            }
-        }
