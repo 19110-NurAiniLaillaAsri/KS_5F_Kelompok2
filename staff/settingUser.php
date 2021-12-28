@@ -1,4 +1,5 @@
-$sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
+<?php 
+    $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
     $querySetting = mysqli_query($koneksi, $sqlEditUser);
     $rowSet = mysqli_fetch_array($querySetting);
     // Setting User
@@ -7,7 +8,6 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
         $password_lama = $_POST["password_lama"];
         $password_baru = $_POST["password_baru"];
         $nama = $_POST["nama"];
-        $no_hp = $_POST["no_hp"];
         $no_hp = $_POST["no_hp"];
         $alamat = $_POST["alamat"];
         if($password_baru==""){
@@ -18,7 +18,7 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                         alert('Berhasil Update User!');
                         document.location.href = 'index.php';
                     </script>
-            ";
+                ";
             }
             else{
                 echo "
@@ -38,7 +38,7 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                         document.location.href = 'index.php';
                     </script>
                 ";
-                 }
+            }
             else{
                 echo "
                     <script>
@@ -49,7 +49,8 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
             }
         }
     }
-            <form method="POST">
+    echo '
+        <form method="POST">
             <div class="modal fade" id="edit'.$id_user.'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -72,14 +73,14 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                                 <div class=col>
                                     <input class="form-control" name="no_hp" type="text" value="'.$rowSet['no_hp'].'" required><br>
                                 </div>
-                               </div>
+                            </div>
                             <div class="row">
                                 <div class="col-5 mt-1"><label>Alamat</label></div>
                                 <div class=col>
                                     <input class="form-control" name="alamat" type="text" value="'.$rowSet['alamat'].'" required><br>
                                 </div>
                             </div>
-<div class="row mt-4">
+                            <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Lama</label></div>
                                 <div class=col>
                                     <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br>
@@ -103,7 +104,7 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                     </div>
                 </div>
             </div>
- <!-- Tombol Konfirmasi Edit-->
+            <!-- Tombol Konfirmasi Edit-->
             <div class="modal fade" id="alertEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
