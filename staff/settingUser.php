@@ -28,3 +28,13 @@ $sqlEditUser = "SELECT * FROM user WHERE id_user = '$id_user'";
                     </script>
                 ";
             }
+        }
+        else {
+            $querySet = mysqli_query($koneksi, "UPDATE user SET password=MD5('$password_baru'), nama='$nama', no_hp='$no_hp', alamat='$alamat' WHERE id_user='$id_user' AND password=MD5('$password_lama')") or die($koneksi);
+            if ($querySet){
+                echo "
+                    <script>
+                        alert('Berhasil Update User dan Password!');
+                        document.location.href = 'index.php';
+                    </script>
+                ";
