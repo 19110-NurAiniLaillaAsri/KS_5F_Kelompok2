@@ -1,6 +1,5 @@
 <?php
-    require '../koneksi.php';
-    require 'function/session.php';
+    require 'function/kelola_Transaksi.php';
 ?>
 <html>
 <head>
@@ -20,57 +19,78 @@
                 <a href="M_identitasMotor.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-database me-2"></i>Identitas Motor</a>
                 <a href="M_kelolaUser.php" class="list-group-item list-group-item-action bg-transparent warna-1 fw-bold"><i class="fas fa-users me-2"></i>Kelola User</a>
                 <a href="M_transaksi.php" class="list-group-item list-group-item-action bg-transparent active-bar fw-bold"><i class="fas fa-tags me-2"></i>Transaksi</a>
-                <a href="../logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
-                onclick="return confirm('Keluar ?')"><i class="fas fa-sign-out-alt me-2"></i>Keluar</a> 
             </div>
         </div>
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-2 py-4 px-4">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center me-auto">
                     <i class="fas fa-align-left warna-1 fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0 warna-1">Menu</h2>
                 </div>
+                <div class="dropdown ms-3">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i><?= ucfirst($_SESSION['nama']);?></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
+                            <i class="fas fa-cog me-3"></i>Setting</button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
+                    </ul>
+                </div>
+                <?php include 'settingUser.php'; ?>
             </nav>
 <!-- Page Content -->
-            <div class="container">
-                <div class="row my-4">
-                    <h3 class="fs-4 warna-1 text-center mb-4">Transaksi</h3>
-                    
-                </div>
-                <div class="row">
-                    <!-- <h4 class="h4 warna-1 text-center mb-3">Data Kendaraan</h4> -->
-                    <div class="table-responsive-xxl">
-                            <table class="table table-bordered border-primary align-middle text-center  mx-auto" style="min-width: 800px;">
-                                <thead class="table-dark border-light">
-                                    <tr>
-                                        <th style="width: 15%;">Id Transaksi</th>
-                                        <th style="width: 15%;">Id Motor</th>
-                                        <th style="width: 15%;">Id User</th>
-                                        <th style="width: 15%;">Tanggal Transaksi</th>
-                                        <th style="width: 25%;">Bukti Transaksi</th>
-                                        <th style="width: 15%;">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-light border-dark">
+            <div class="container-fluid">
+                <div class="row mx-2">
+                    <h4 class="h4 warna-1 text-center">Transaksi</h4>
+                    <div class="row d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary my-3" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#tambahTransaksi"><i class="fas fa-plus-circle me-3"></i>Tambah Transaksi</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-primary align-middle text-center mx-auto" style="min-width: 800px;">
+                            <thead class="table-dark border-light">
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>61</td>
-                                    <td>
-                                        <button type="submit" class="btn btn-warning" name="editUser" onclick="return confirm('Edit Transaksi?')"><i class="far fa-edit"></i></button>
-                                        <button type="submit" class="btn btn-danger" name="hapusUser" onclick="return confirm('Hapus Transaksi?')"><i class="far fa-trash-alt"></i></button>
-                                    </td>
+                                    <th>No</th>
+                                    <th>ID Transaksi</th>
+                                    <th>ID Motor</th>
+                                    <th>ID User</th>
+                                    <th style="width: 200px;">Tanggal Transaksi</th>
+                                    <th>Status Transaksi</th>
+                                    <th>Aksi</th>
                                 </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $no = 1;
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){?>
+                                            <div class="invisible position-absolute">
+                                                <input type="text" class="form-control" name="id_motor" value="<?php echo $row['id_motor'] ?>">
+                                            </div>
+                                            <tr>
+                                                <td><?php echo $no++ ?></td>
+                                                <td><?php echo $row['id_transaksi'] ?></td>
+                                                <td><?php echo $row['id_motor'] ?></td>
+                                                <td><?php echo $row['id_user'] ?></td>
+                                                <td><?php echo $row['tgl_transaksi'] ?></td>
+                                                <td><?php echo $row['status_transaksi'] ?></td>
+                                                <td style="width: 160px;">
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail<?php echo $row['id_transaksi'] ?>"><i class="fas fa-search"></i></button>
+                                                    <?php if($row['status_transaksi']=="Waiting"){ ?>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#proses<?php echo $row['id_transaksi'] ?>"><i class="fas fa-check warna-1"></i></button>
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batal<?php echo $row['id_transaksi'] ?>"><i class="fas fa-times"></i></button>
+                                                    <?php } ?>
+                                                </td> 
+                                                <?php include 'Modal_Transaksi.php'; ?>
+                                            </tr>
+                                        </form><?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>  
-        </div>
-    </div>
 <!-- Modal Tambah Transaksi -->
                 <form method="POST" class="mx-2" enctype="multipart/form-data">
                     <div class="modal fade" id="tambahTransaksi" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
