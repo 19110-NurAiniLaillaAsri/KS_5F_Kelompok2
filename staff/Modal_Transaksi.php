@@ -110,7 +110,8 @@
                         Status Motor <?php echo $row['id_motor'] ?> menjadi "Terjual"
                     </div>
                     <div class="modal-footer">
-                        
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary" name="updateTransaksi">Yes</button>
                     </div>
                 </div>
             </div>
