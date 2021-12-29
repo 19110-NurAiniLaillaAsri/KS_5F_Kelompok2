@@ -41,6 +41,11 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <div class="row">  
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
+                            </div>                                     
+                        </div>
                     </div>
                 </div>
             </div>
