@@ -118,3 +118,13 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
+                                                                 <div class="row mt-4">
+                                                                    <div class="col-5 mt-1"><label>Reset Password</label></div>
+                                                                    <div class=col>
+                                                                        <select class="form-select" name="reset_password">
+                                                                            <option value="No">No</option>
+                                                                            <option value="Yes">Yes</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
