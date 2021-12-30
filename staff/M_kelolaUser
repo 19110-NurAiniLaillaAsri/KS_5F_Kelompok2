@@ -108,3 +108,13 @@
                                                                         <input class="form-control" name="alamat" type="text" value="'.$row['alamat'].'" required><br>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row">
+                                                                    <div class="col-5 mt-1"><label>Hak Akses</label></div>
+                                                                    <div class=col>
+                                                                        <select class="form-select" name="hak_akses">
+                                                                            <option '?> <?php if ($row['hak_akses'] == "Pemilik") { echo 'selected'; }?> <?php echo ' value="Pemilik">Pemilik</option>
+                                                                            <option '?> <?php if ($row['hak_akses'] == "Staff Toko") { echo 'selected'; }?> <?php echo ' value="Staff Toko">Staff Toko</option>
+                                                                            <option '?> <?php if ($row['hak_akses'] == "Customer") { echo 'selected'; }?> <?php echo ' value="Customer">Customer</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
