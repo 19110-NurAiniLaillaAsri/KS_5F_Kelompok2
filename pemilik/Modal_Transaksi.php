@@ -97,3 +97,22 @@
                 </div>
             </div>
         </div>
+<!-- Tombol Konfirmasi Proses Transaksi -->
+        <div class="modal fade" id="alertProses<?php echo $row['id_transaksi'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Motor Terjual</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Proses Transaksi <?php echo $row['id_transaksi'] ?> Selesai ?<br>
+                        Status Motor <?php echo $row['id_motor'] ?> menjadi "Terjual"
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </form>
