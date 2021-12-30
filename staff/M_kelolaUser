@@ -46,3 +46,34 @@
                     <div class="row d-flex justify-content-end">
                         <button type="button" class="btn btn-primary my-3" style="width: 180px;" data-bs-toggle="modal" data-bs-target="#tambahUser"><i class="fas fa-plus-circle me-3"></i>Tambah User</button>
                     </div>
+                    <div class="table-responsive-xxl">
+                        <table class="table table-bordered border-primary align-middle text-center  mx-auto" style="min-width: 800px;">
+                            <thead class="table-dark border-light">
+                                <tr>
+                                    <th>ID User</th>
+                                    <th>Nama</th>
+                                    <th>No HP</th>
+                                    <th>Alamat</th>
+                                    <th>Hak Akses</th>
+                                    <th style="width: 110px;">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-light border-dark">
+                                <?php
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($queryRead)){
+                                        echo '
+                                        <div class="invisible position-absolute">
+                                            <input type="text" class="form-control" name="id_user" value="'.$row['id_user'].'">
+                                        </div>
+                                        <form method="POST">
+                                            <tr>
+                                                <td>'.$row['id_user'].'</td>
+                                                <td>'.$row['nama'].'</td>
+                                                <td>'.$row['no_hp'].'</td>
+                                                <td>'.$row['alamat'].'</td>
+                                                <td>'.$row['hak_akses'].'</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit'.$row['id_user'].'"><i class="far fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus'.$row['id_user'].'"><i class="far fa-trash-alt"></i></button>
+                                                </td>'?>   
