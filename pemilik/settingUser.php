@@ -80,7 +80,7 @@ id="exampleModalLabel">Edit Data User</h5>
                             <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Lama</label></div>
                                 <div class=col>
-                                <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br></div>
+                                    <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br></div>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Baru</label></div>
@@ -90,4 +90,12 @@ id="exampleModalLabel">Edit Data User</h5>
                             <div class="modal-footer">
                                 <div class="row mt-3">  
                                     <div class="col-md-12 d-flex justify-content-end">
-                                        <button type="button" class="btn btn-secondary mx-2"
+                                        <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                    </div>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
