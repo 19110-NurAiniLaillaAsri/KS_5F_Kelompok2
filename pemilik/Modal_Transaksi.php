@@ -128,9 +128,11 @@
                     </div>
                     <div class="modal-body">
                         <div class="invisible position-absolute">
-                           
+                           <input type="text" class="form-control" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" readonly>
+                            <input type="text" class="form-control" name="id_motor" value="<?php echo $row['id_motor'] ?>" readonly>
                         </div>
-                       
+                        Cancel Transaksi <?php echo $row['id_transaksi'] ?> ?<br>
+                        Status motor <?php echo $row['id_motor'] ?> akan kembali "Tersedia"
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
