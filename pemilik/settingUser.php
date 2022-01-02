@@ -64,7 +64,8 @@ id="exampleModalLabel">Edit Data User</h5>
                                 <input type="text" class="form-control" name="id_user" value="'.$rowSet['id_user'].'">
                             </div>
                             <div class="row">
-                                <div class="col-5
-
+                                <div class="col-5 mt-1"><label>Nama</label></div>
+                                <div class=col>
+                                    <input class="form-control" name="nama" type="text" value="'.$rowSet['nama'].'" required><br>
 
 
