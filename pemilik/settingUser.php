@@ -82,3 +82,8 @@ id="exampleModalLabel">Edit Data User</h5>
                                 <div class=col>
                                     <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br></div>
                             </div>
+                            <div class="row mt-4">
+                                <div class="col-5 mt-1"><label>Password Baru</label></div>
+                                <div class=col>
+                                    <input class="form-control" name="password_baru" type="password" placeholder="Opsional"><br></div>
+                            </div>
