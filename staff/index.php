@@ -37,7 +37,7 @@
                         <li><a class="dropdown-item" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
                     </ul>
                 </div>
-                <?php require 'settingUser.php'; ?>
+                <?php require 'settingUser.php'; ?> 
             </nav>
 <!-- Card -->
             <div class="container-fluid px-5">
