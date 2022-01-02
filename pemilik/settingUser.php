@@ -67,7 +67,7 @@
                                 <div class=col>
                                     <input class="form-control" name="nama" type="text" value="'.$rowSet['nama'].'" required><br>
                                     </div>
-                            </div>
+                                </div>
                             <div class="row">
                                 <div class="col-5 mt-1"><label>No HP</label></div>
                                 <div class=col>
