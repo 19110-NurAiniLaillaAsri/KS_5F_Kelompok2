@@ -1,7 +1,7 @@
 # KS_5F_Kelompok2
 
 * Tema: Sistem Penjualan Motor Bekas
-* Link Website: http://ks-5f-kelompok2.great-site.net/login.php
+* Link Website: http://ks-5f-kelompok2.great-site.net
 * Ketua: Giovanny Maria Rosari (1910631170188)
 *	Anggota:
   1.	Muhammad Alam Nasra (1910631170030)
