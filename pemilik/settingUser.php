@@ -75,5 +75,7 @@ id="exampleModalLabel">Edit Data User</h5>
                             </div>
                             <div class="row">
                                 <div class="col-5 mt-1"><label>Alamat</label></div>
-                                <div class=col>
+                                <div class=col><input class="form-control" name="alamat" type="text" value="'.$rowSet['alamat'].'" required><br>
+                                </div>
+                            </div>
 
