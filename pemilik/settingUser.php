@@ -83,14 +83,16 @@
                             <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Lama</label></div>
                                 <div class=col>
-                                    <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br></div>
+                                    <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br>
                                 </div>
+                            </div>
                             <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Baru</label></div>
                                 <div class=col>
-                                    <input class="form-control" name="password_baru" type="password" placeholder="Opsional"><br></div>
+                                    <input class="form-control" name="password_baru" type="password" placeholder="Opsional"><br>
+                                </div>
                             </div>
-<div class="modal-footer">
+                            <div class="modal-footer">
                                 <div class="row mt-3">  
                                     <div class="col-md-12 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
