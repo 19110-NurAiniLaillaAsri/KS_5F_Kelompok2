@@ -7,7 +7,7 @@
     $querySession = mysqli_query($koneksi, "SELECT * FROM user WHERE id_user='$id_user'");
     $rowSession = mysqli_fetch_array($querySession);
     $_SESSION['nama'] = $rowSession['nama'];
-// Cek Session
+// Cek Session.
     if (!isset($_SESSION["Staff Toko"])){
         header("Location: ../login.php");
         exit;
