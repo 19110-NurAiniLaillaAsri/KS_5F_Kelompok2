@@ -78,4 +78,6 @@ id="exampleModalLabel">Edit Data User</h5>
                                 <div class=col><input class="form-control" name="alamat" type="text" value="'.$rowSet['alamat'].'" required><br>
                                 </div>
                             </div>
+                            <div class="row mt-4">
+                                <div class="col-5 mt-1"><label>Password Lama</label></div>
 
