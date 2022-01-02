@@ -128,3 +128,58 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
+                                                                <div class="row mt-3">  
+                                                                        <div class="col-md-12 d-flex justify-content-end">
+                                                                            <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Keluar</button>
+                                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                                                        </div>                                     
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Tombol Konfirmasi Edit-->
+                                                <div class="modal fade" id="alertEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Edit data ID User '.$row['id_user'].'?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                                                <button type="submit" class="btn btn-primary" name="updateUser">Yes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <!-- Tombol Konfirmasi Hapus -->
+                                                <div class="modal fade" id="hapus'.$row['id_user'].'" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
+                                                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Hapus User !</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Hapus user '.$row['id_user'].' ?<br>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                                                <button name="hapusUser" type="submit" class="btn btn-primary">Hapus</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </tr>
+                                        </form>';
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
