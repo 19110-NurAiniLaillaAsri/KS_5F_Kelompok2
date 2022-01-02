@@ -84,7 +84,7 @@
                                 <div class="col-5 mt-1"><label>Password Lama</label></div>
                                 <div class=col>
                                     <input class="form-control" name="password_lama" type="password" placeholder="Masukan Password"><br></div>
-                            </div>
+                                </div>
                             <div class="row mt-4">
                                 <div class="col-5 mt-1"><label>Password Baru</label></div>
                                 <div class=col>
