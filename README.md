@@ -9,7 +9,7 @@ Keamanan Sistem
 Purwantoro, M.Kom.
 
 # Anggota 
-  1.	Muhammad Alam Nasra (1910631170030)
+  1.	Muhamad Alam Nasra (1910631170030)
   2.	Mutiara Azahri (1910631170034)
   3.	Nur Aini Lailla Asri (1910631170110)
   4.	Nurli Alifah (1910631170114)
